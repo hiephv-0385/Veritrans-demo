@@ -1,0 +1,51 @@
+# Logfile created on 2016-08-18 11:05:37 +0700 by logger.rb/54362
+I, [2016-08-18T11:05:37.147289 #11460]  INFO -- : Perform /v2/charge 
+Sending: {"payment_type":"VTWEB","transaction_details":{"order_id":"Sample Order-1","gross_amount":100000}}
+W, [2016-08-18T11:05:38.602922 #11460]  WARN -- : Failed /v2/charge 
+Got: {"status_code":"406","status_message":"Order ID has been paid and utilized, please use another order ID"}
+
+I, [2016-08-18T11:06:03.948017 #11460]  INFO -- : Perform /v2/charge 
+Sending: {"payment_type":"VTWEB","transaction_details":{"order_id":"Sample Order-1","gross_amount":100000}}
+W, [2016-08-18T11:06:04.328295 #11460]  WARN -- : Failed /v2/charge 
+Got: {"status_code":"406","status_message":"Order ID has been paid and utilized, please use another order ID"}
+
+I, [2016-08-18T11:06:57.538895 #11460]  INFO -- : Perform /v2/charge 
+Sending: {"payment_type":"VTWEB","transaction_details":{"order_id":"Sample Order-1","gross_amount":100000}}
+W, [2016-08-18T11:06:57.922857 #11460]  WARN -- : Failed /v2/charge 
+Got: {"status_code":"406","status_message":"Order ID has been paid and utilized, please use another order ID"}
+
+I, [2016-08-18T11:09:36.440649 #11574]  INFO -- : Perform /v2/charge 
+Sending: {"payment_type":"VTWEB","transaction_details":{"order_id":"Sample Order-2","gross_amount":100000}}
+W, [2016-08-18T11:09:37.486663 #11574]  WARN -- : Failed /v2/charge 
+Got: {"status_code":"406","status_message":"Order ID has been paid and utilized, please use another order ID"}
+
+I, [2016-08-18T11:12:28.682620 #11574]  INFO -- : Perform /v2/charge 
+Sending: {"payment_type":"VTWEB","transaction_details":{"order_id":"Sample Order-2","gross_amount":100000}}
+W, [2016-08-18T11:12:38.131405 #11574]  WARN -- : Failed /v2/charge 
+Got: {"status_code":"406","status_message":"Order ID has been paid and utilized, please use another order ID"}
+
+I, [2016-08-18T11:16:10.586613 #11740]  INFO -- : Perform /v2/charge 
+Sending: {"payment_type":"VTWEB","transaction_details":{"order_id":"Sample Order-10","gross_amount":100000}}
+I, [2016-08-18T11:16:12.406101 #11740]  INFO -- : Success /v2/charge 
+Got: {"status_code":"201","status_message":"OK, success do VTWeb transaction, please go to redirect_url","redirect_url":"https://vtweb.sandbox.veritrans.co.id/v2/vtweb/de7e2e40-ddda-426f-852f-ec85b478a35b"}
+
+I, [2016-08-18T11:18:46.538303 #11740]  INFO -- : Perform /v2/charge 
+Sending: {"payment_type":"VTWEB","transaction_details":{"order_id":"Sample Order-15","gross_amount":100000}}
+I, [2016-08-18T11:18:49.662008 #11740]  INFO -- : Success /v2/charge 
+Got: {"status_code":"201","status_message":"OK, success do VTWeb transaction, please go to redirect_url","redirect_url":"https://vtweb.sandbox.veritrans.co.id/v2/vtweb/5ff6d344-6399-4bbf-9eb0-55b53969fee7"}
+
+I, [2016-08-18T11:22:19.500235 #11740]  INFO -- : Perform /v2/charge 
+Sending: {"payment_type":"VTWEB","transaction_details":{"order_id":"Sample Order-15","gross_amount":100000}}
+I, [2016-08-18T11:22:23.545487 #11740]  INFO -- : Success /v2/charge 
+Got: {"status_code":"201","status_message":"OK, success do VTWeb transaction, please go to redirect_url","redirect_url":"https://vtweb.sandbox.veritrans.co.id/v2/vtweb/0d6d2547-0308-4f9e-b011-f5ea17bd8821"}
+
+I, [2016-08-18T11:36:53.191010 #12143]  INFO -- : Perform /v2/charge 
+Sending: {"payment_type":"credit_card","credit_card":{"token_id":"481111-1114-ec036097-b354-45c0-807e-b20245ab2e9b"},"transaction_details":{"order_id":"testing-0.4142-1471495013","gross_amount":"100000"}}
+I, [2016-08-18T11:36:54.506270 #12143]  INFO -- : Success /v2/charge 
+Got: {"status_code":"200","status_message":"Success, Credit Card transaction is successful","transaction_id":"ec036097-b354-45c0-807e-b20245ab2e9b","order_id":"testing-0.4142-1471495013","gross_amount":"100000.00","payment_type":"credit_card","transaction_time":"2016-08-18 11:36:54","transaction_status":"capture","fraud_status":"accept","approval_code":"1471495014617","masked_card":"481111-1114","bank":"mandiri"}
+
+I, [2016-08-18T11:41:21.114557 #12143]  INFO -- : Perform /v2/charge 
+Sending: {"payment_type":"credit_card","credit_card":{"token_id":"481111-1114-2a446842-cfb2-4285-903e-8314527d726b"},"transaction_details":{"order_id":"testing-0.9115-1471495281","gross_amount":"100000"}}
+I, [2016-08-18T11:41:22.555368 #12143]  INFO -- : Success /v2/charge 
+Got: {"status_code":"200","status_message":"Success, Credit Card transaction is successful","transaction_id":"2a446842-cfb2-4285-903e-8314527d726b","order_id":"testing-0.9115-1471495281","gross_amount":"100000.00","payment_type":"credit_card","transaction_time":"2016-08-18 11:41:22","transaction_status":"capture","fraud_status":"accept","approval_code":"1471495282113","masked_card":"481111-1114","bank":"mandiri"}
+
