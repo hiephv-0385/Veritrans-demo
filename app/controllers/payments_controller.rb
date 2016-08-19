@@ -31,6 +31,22 @@ class PaymentsController < ApplicationController
     )
   end
 
+  def charge_vtdirect
+    @payment = make_payment
+
+    @result = Veritrans.charge(
+      payment_type: "credit_card",
+      credit_card: { token_id: params[:token_id] },
+      transaction_details: {
+        order_id: @payment.order_id,
+        gross_amount: @payment.amount
+      }
+    )
+    if @result.success?
+      render "result"
+    end
+  end
+
   # Processing HTTP Notification from Veritrans
   # POST request with JSON-encoded body
   # If you using Veritrans::Events then you don't need this
